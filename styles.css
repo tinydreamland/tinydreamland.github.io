@@ -1,73 +1,118 @@
-<!doctype html>  <!-- we are announcing to the browser that this website is written html5, rather than an earlier version -->
-<html lang="en"> <!-- we are opening the "html" tag which contains our entire site! We are also announcing the languge (English) to the browser -->
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
 
-<head> <!-- everything in the "head" tag is for the browser and search engine. It won't appear on your website -->
-	<meta charset="utf-8"> <!-- here we are announcing the character encoding -->
-	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- here we are giving instructions on how to control the page's dimensions and scaling -->
-	<meta name="author" content="Tiny Dreamland"> <!-- here we are announcing the author (you!)-->
-	<meta name="description" content="Micro musical dream pocket"> <!-- here we are describing what this site is about-->
-	<title>Tiny Dreamland</title> <!-- here is the title of the site -->
-	<!-- below is a link to our CSS "stylesheet" so our webpage can look nice -->
-	<link href="styles.css" rel="stylesheet" type="text/css">         
-	<meta property="og:image" content="IMAGE URL HERE"> <!-- here is the main image for the site -->
-	<meta property="og:url" content="URL OF SITE HERE"> <!-- here is the URL of the site -->
-</head> 
 
-<body>
-	<header> <!-- the "header" tag is for introductory content or navigational links -->
-		<nav> <!-- the "nav" tag is for navigational links -->
-			<ul> <!-- the "ul" tag is for an unordered (not numbered) list of things -->
-				<li><a href="#aboutMe">About me</a></li> <!-- the "li" tag is for a single list item, and the "a" tag is for a link -->
-				<li><a href="#myWork">My Work</a></li> <!-- the "li" tag is for a single list item, and the "a" tag is for a link -->
-				<li><a href="#contact">Contact</a></li> <!-- the "li" tag is for a single list item, and the "a" tag is for a link -->
-			</ul>
-		</nav>
-		<!-- <img src="img/Pink TD copy 2.png" alt="Stylized image of a colourful shape" id="logo"> the "img" tag is how we insert an image -->
-	</header> 
+body {
+  font-family: 'Source Sans Pro' sans-serif;
+  font-size: 1.15rem;
+}
 
-	<main> <!-- The "main" tag is for the main content (no headers or footers) -->
-		<section id="aboutMe" class="section"> <!-- the "section" tag is used for content! Learn more (or possibly get more confused) here: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section -->
-			<h1>About</h1> <!-- the "h1" tag is for a top-level header -->
-			<p>Welcome to my micro musical dream pocket. Here you will find links to my musical and visual projects as well as my Twitch channel where I like to experiment with field recordings and turn them into synthesizers using Ableton.</p> <!-- the "p" tag is for text -->
-			<h2>Upcoming Events</h2> <!-- the "h2" tag is for a second-level header -->
-			<p>I’m running a free music production workshop this summer for anyone who is new to recording or new to Ableton. 
+.section {
+  margin: 6rem 10vw;
+}
 
-				Please feel free to explore the site, and follow me on Twitch to be notified when we go live. Let’s get creative and concreate some cool sounds.</p>
-				<p><img src="img/ableton pic.JPG" alt="An image of ableton software" class="work-Img"><a
-					href="https://www.twitch.tv/pallasathene_hq" target="_blank"> Follow on Twitch </a>.</p>
-			</p>
-		</section>
+p {
+  line-height: 1.5;
+  /* margin: 20vw; */
+}
 
-		<section id="myWork" class="section">
-			<h1>Heading</h1>
-			<h2>Subheading</h2>
-			<p>add more text here.</p>
-			<br> <!-- the "br" tag makes a line break. There are many other ways to do this with CSS as well -->
-			<img src="img/love 500.png" alt="An image of a waveform on pink background word says Tiny Dreamland." class="work-Img"> <!-- the "img" tag is for inserting an image. Each image should always have an "alt" for screenreaders -->
-			<img src="img/hype 500.png" alt="A  Twitch Emote with a little woman holding giant words hype ." class="work-Img">
-			<img src="img/aww universe 500.png" alt="A  Twitch Emote with a little cartoon woman alien in awe." class="work-Img">
-		</section>
+a {
+  color: #f327d8;
+}
 
-		<section id="contact" class="section">
-			<h1>Main Site:</h1>
-			<p>Click here for a full schedule of events <a
-					href="https://www.pallasathenemusic.com/live" target="_blank">Pallas Athene Website</a>.</p> <!-- the "a" tag is for inserting a link. In this case we are inserting a "mailto" link on the email -->
-		</section>
+a:hover {
+  color: salmon;
+}
 
-	</main>
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-	<footer> <!-- the "footer" tag is for content at the bottom of the page -->
-		<a href="mailto:%20marieflanagan@gmail.com" target="blank"><img src="img/social-icons/mail.svg" alt="Email"
-				class="feather"></a>
-		<a href="https://linkedin.com/in/marieflanagan/" target="blank"><img src="img/social-icons/linked-in.svg"
-				alt="LinkedIn" class="feather"></a>
-		<a href="https://twitter.com/omarieclaire/" target="blank"><img src="img/social-icons/twitter.svg" alt="Twitter"
-				class="feather"></a>
-		<a href="https://www.facebook.com/0marieclaire/" target="blank"><img src="img/social-icons/facebook.svg"
-				alt="Facebook" class="feather"></a>
-		<a href="https://www.instagram.com/pallasathenehq/" target="blank"><img src="img/social-icons/instagram.svg"
-				alt="Instagram" class="feather"></a>
-	</footer>
-</body>
+#logo {
+  display: block;
+  max-width: 70vw;
+  margin: auto;
+}
 
-</html>
+.work-Img {
+  display: block;
+  max-width: 80vw;
+  margin: auto;
+}
+
+h1 {
+  border-bottom: 1px solid rgba(82, 44, 252, .8);
+  color: rgba(82, 44, 252, .8);
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 2rem 0;
+  padding: 1rem 0 1rem 0;
+}
+
+h2 {
+  color: rgba(250, 128, 114, 0.9);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 2rem 0 .35rem 0;
+
+}
+
+header {
+  text-align: center;
+  width: 100%;
+}
+
+nav ul {
+  padding: 0 0 0 2rem;
+  list-style: none;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  margin: 2rem 0 0 0;
+}
+
+nav li {
+  float: left;
+}
+
+nav a {
+  color: rgba(102, 97, 127, .95);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: opacity 150ms ease-in-out;
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  /* color: rgba(46, 34, 107, 0.95); */
+}
+
+#contact {
+  padding: 0 0 3rem 0;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  /* padding: .6em 4em; */
+}
+
+footer {
+  padding: 3rem 0 3rem 0;
+  background-color: rgba(245, 243, 251, .9);
+  text-align: center;
+  width: 100%;
+}
+
+.feather {
+  margin: .3em 1.1em;
+  opacity: 0.3;
+}
+
+.feather:hover {
+  opacity: 0.7;
+}
